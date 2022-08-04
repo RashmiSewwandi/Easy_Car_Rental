@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Easy Car Rental</title>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/adminstyle.css" />
+    <link rel="stylesheet" href="../assets/css/normalize.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="sidebar close">
+      <div class="logo-details">
+        <i class="bx bxs-car"></i>
+        <span class="logo_name">EasyCarRental</span>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="adminDashboard.html">
+            <i class="bx bx-grid-alt"></i>
+            <span class="link_name">Dashboard</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li>
+              <a class="link_name" href="adminDashboard.html">Dashboard</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item" role="presentation">
+          <div class="iocn-link">
+            <a href="adminCustomer.html">
+              <i class="bx bxs-user"></i>
+              <span class="link_name">Customer</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li>
+              <a class="link_name" href="adminCustomer.html">Customer</a>
+            </li>
+            <li><a href="#">Update</a></li>
+          </ul>
+        </li>
+        <li>
+          <div class="iocn-link">
+            <a href="adminCarManage.html">
+              <i class="bx bxs-car"></i>
+              <span class="link_name">Manage Car</span>
+            </a>
+            <i class="bx bxs-chevron-down arrow"></i>
+          </div>
+          <ul class="sub-menu">
+            <li>
+              <a class="link_name" href="adminCarManage.html">Manage Car</a>
+            </li>
+            <li><a href="#">Add New</a></li>
+            <li><a href="#">Edit</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bxs-group"></i>
+            <span class="link_name">Manage Drivers</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Manage Drivers</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="#">
+            <i class="bx bxs-message-rounded-dots"></i>
+            <span class="link_name">Rental Request</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Rental Request</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-line-chart"></i>
+            <span class="link_name">Income</span>
+          </a>
+          <ul class="sub-menu blank">
+            <li><a class="link_name" href="#">Income</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <div class="profile-details">
+            <i class="bx bx-log-out"></i>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <section class="home-section">
+        <div class="home-content">
+          <i class="bx bx-menu"></i>
+          <span class="text">MANAGE VEHICLE</span>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-md-10">
+              <form class="row g-4 pt-5" id="vehicleForm">
+                <div class="col-md-4">
+                  <label for="regNo" class="form-label"
+                    >Registration Number</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="regNo"
+                    placeholder="Reg No"
+                  />
+                </div>
+
+                <div class="col-md-4">
+                  <label for="brand" class="form-label">Brand</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="brand"
+                    placeholder="Vehicle Brand"
+                  />
+                </div>
+
+                <div class="col-md-4">
+                  <label for="type" class="form-label">Type</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="type"
+                    placeholder="Vehicle Type"
+                  />
+                </div>
+
+                <div class="col-md-4">
+                  <label for="color" class="form-label">Color</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="color"
+                    placeholder="Vehicle Color"
+                  />
+                </div>
+
+                <div class="col-md-4">
+                  <label for="fuelType" class="form-label">Fuel Type</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="fuelType"
+                    placeholder="Fuel Type"
+                  />
+                </div>
+
+                <div class="col-md-4">
+                  <label for="transmission" class="form-label"
+                    >Transmission</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="transmission"
+                    placeholder="Vehicle Color"
+                  />
+                </div>
+
+                <!-- <div class="col-md-4">
+                  <label for="fuelType" class="form-label">Fuel Type</label>
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    id="fuelType"
+                  >
+                    <option selected>Select Fuel Type</option>
+                    <option value="1">Diesel</option>
+                    <option value="2">Petrol</option>
+                  </select>
+                </div>
+
+                <div class="col-md-4">
+                  <label for="transmission" class="form-label"
+                    >Transmission</label
+                  >
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    id="transmission"
+                  >
+                    <option selected>Select Transmission</option>
+                    <option value="1">Auto</option>
+                    <option value="2">Manual</option>
+                  </select>
+                </div> -->
+
+                <div class="col-md-4">
+                  <label for="passengers" class="form-label"
+                    >Number of Passengers</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="passengers"
+                    placeholder="Passengers"
+                  />
+                </div>
+
+                <div class="col-md-4">
+                  <label for="mileage" class="form-label">Mileage</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="mileage"
+                    placeholder="Free mileage for the price and duration"
+                  />
+                </div>
+
+                <div class="col-md-4">
+                  <label for="rentedStatus" class="form-label"
+                    >Rented Status</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="rentedStatus"
+                    placeholder="Rented Status"
+                  />
+                </div>
+
+                <!-- <div class="col-md-3">
+                  <label for="frontImg" class="form-label"
+                    >Front View Image</label
+                  >
+                  <input class="form-control" type="file" id="frontImg" />
+                </div>
+
+                <div class="col-md-3">
+                  <label for="backImg" class="form-label"
+                    >Back View Image</label
+                  >
+                  <input class="form-control" type="file" id="backImg" />
+                </div>
+
+                <div class="col-md-3">
+                  <label for="sideImg" class="form-label"
+                    >Side View Image</label
+                  >
+                  <input class="form-control" type="file" id="sideImg" />
+                </div>
+
+                <div class="col-md-3">
+                  <label for="interiorImg" class="form-label"
+                    >Interior View Image</label
+                  >
+                  <input class="form-control" type="file" id="interiorImg" />
+                </div> -->
+
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end pt-3">
+                  <button
+                    class="btn btn-success btn-lg rounded-pill"
+                    type="button"
+                    id="btnSaveVehicle"
+                  >
+                    <i class="bx bxs-save fs-5"></i>
+                    Save Vehicle
+                  </button>
+
+                  <button
+                    class="btn btn-danger btn-lg rounded-pill"
+                    type="button"
+                    id="btnSaveVehicle"
+                  >
+                    <i class="bx bxs-trash"></i>
+                    Delete
+                  </button>
+
+                  <button
+                    class="btn btn-primary btn-lg rounded-pill"
+                    type="button"
+                    id="btnSaveVehicle"
+                  >
+                    <i class="bx bxs-edit-alt"></i>
+                    Update
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="row justify-content-center pt-5">
+            <div class="col-md-11">
+              <table class="table align-middle mb-0 bg-light table-hover">
+                <thead class="bg-success text-center text-white">
+                  <tr>
+                    <th>Registration Number</th>
+                    <th>Brand</th>
+                    <th>Type</th>
+                    <th>Color</th>
+                    <th>Fuel Type</th>
+                    <th>Transmission</th>
+                    <th>Passengers</th>
+                    <th>Mileage</th>
+                    <th>Rented Status</th>
+                  </tr>
+                </thead>
+
+                <tbody class="text-center table-info" id="tblVehicle">
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="../assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/admin.js"></script>
+    <script src="../assets/jQuery/jquery-3.6.0.min.js"></script>
+
+    <script>
+      var baseUrl = "http://localhost:8080/Easy_Car_Rent_System_master_war_exploded/Vehicle";
+
+      $("#btnSaveVehicle").click(function () {
+        saveVehicle();
+      });
+
+      loadAllVehicle();
+
+      function saveVehicle() {
+        var data = $("#vehicleForm").serialize();
+
+        $.ajax({
+          url: baseUrl,
+          method: "POST",
+          data: data, // if we send data with the request
+          success: function (res) {
+            if (res.code == 200) {
+              alert("Successfully Vehicle Registered");
+              loadAllVehicle();
+            }
+          },
+          error: function (ob) {
+            alert(ob.responseJSON.message);
+          },
+        });
+      }
+
+      function loadAllVehicle() {
+        $("#tblVehicle").empty();
+        $.ajax({
+          url: baseUrl,
+          method: "GET",
+          success: function (resp) {
+            for (const vehicle of resp.data) {
+              let row = `<tr><td>${vehicle.regNo}</td><td>${vehicle.brand}</td><td>${vehicle.type}</td><td>${vehicle.transmission}</td><td>${vehicle.color}</td><td>${vehicle.passengers}</td><td>${vehicle.fuelType}</td><td>${vehicle.mileage}</td><td>${vehicle.rentedStatus}</td></tr>`;
+              $("#tblVehicle").append(row);
+            }
+          },
+          error: function (ob) {
+            alert(ob.responseJSON.message);
+          },
+        });
+      }
+    </script>
+  </body>
+</html>
